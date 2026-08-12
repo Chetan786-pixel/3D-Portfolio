@@ -109,7 +109,7 @@ function preloadImages() {
     const image = new Image();
 
     image.src =
-  `/frames-webp/ezgif-frame-${String(i).padStart(3, "0")}.webp`;
+  `${import.meta.env.BASE_URL}frames-webp/ezgif-frame-${String(i).padStart(3, "0")}.webp`;
 
     image.onload = () => {
 
