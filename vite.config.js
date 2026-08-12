@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-  base: '/3D-Portfolio/',
-});
+export default defineConfig(({ command }) => ({
+  base:
+    command === 'build' && !process.env.VERCEL
+      ? '/3D-Portfolio/'
+      : '/',
+}));
